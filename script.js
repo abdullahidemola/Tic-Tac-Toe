@@ -21,7 +21,7 @@ const drawBoard = () => {
 
 const boxClicked = (e) => {
   const id = e.target.id;
-  if (!spaces[id]) {
+  if (spaces[id] == null ) {
     spaces[id] = currentPlayer;
     e.target.innerText = currentPlayer;
     if (playerWon()) {
